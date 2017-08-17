@@ -108,7 +108,7 @@ function pagesCallback(data){
 						var tags = tasks[i].tags;
 						if(tags !== undefined && tags !== null && Array.isArray(tags) && tags.length > 0){
 							var restrictedTags = ["Active", "Passive"];
-							var studytype = null;
+							var studytype = "";
 							if (tags.includes("Active")){
 								studytype = "Active";
 							} else if(tags.includes("Passive")){
