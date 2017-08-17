@@ -103,6 +103,7 @@ function pagesCallback(data){
 							"proj" : proj,
 							"tasl" : task,
 							"client" : client,
+							"tag" : "wurt",
 						};
 
 						var tags = tasks[i].tags;
@@ -116,7 +117,7 @@ function pagesCallback(data){
 									"proj" : proj,
 									"tasl" : task,
 									"client" : client,
-									"tag" : tags[b]
+									"tag" : tags[b],
 								});
 							}
 						}else{
