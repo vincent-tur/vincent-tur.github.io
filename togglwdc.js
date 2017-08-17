@@ -105,9 +105,9 @@ function pagesCallback(data){
 							"client" : client,
 						};
 
-						var tags = tasks[i].tags;
+						tags = tasks[i].tags;
 						if(tags !== undefined && tags !== null && Array.isArray(tags) && tags.length > 0){
-							var restrictedTags = ["Active", "Passive"];
+							restrictedTags = ["Active", "Passive"];
 							// var studytype = "";
 							// if (tags.includes("Active")){
 							// 	studytype = "Active";
