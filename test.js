@@ -1,4 +1,4 @@
-var url = "https://toggl.com/reports/api/v2/details?user_agent="+email+"&workspace_id="+workspace+"&since="+startt+"&until="+endt+"&page=";
+var url = "https://toggl.com/reports/api/v2/details?user_agent=fa_vince@hotmail.com&workspace_id=2204314&since=2017-08-01&until=2017-08-17&page=";
 tableau.log(url);
 
 for(q = 1; q <= len; q++){
@@ -8,7 +8,7 @@ for(q = 1; q <= len; q++){
 		url: url + q,
 		dataType: 'json',
 		beforeSend: function (xhr) {
-			xhr.setRequestHeader('Authorization', 'Basic ' + btoa(token + ':api_token'));
+			xhr.setRequestHeader('Authorization', 'Basic ' + btoa('d323f7bda7be76cc85b7836db3eaafab:api_token'));
 		},
 		success: function (resp) {
 			var tasks = resp.data; 
