@@ -107,10 +107,18 @@ function pagesCallback(data){
 
 						var tags = tasks[i].tags;
 						if(tags !== undefined && tags !== null && tags.length > 0){
-							// for(b = 0; b <= tags.length; b++){
-							// 	rowObj.tags = tags[b];
-							// 	tableData.push(rowObj);
-							// }
+							for(b = 0; b <= tags.length; b++){
+								rowObj.tags = tags[b];
+								tableData.push({
+									"desc" : desc,
+									"start" : start,
+									"end" : end,
+									"proj" : proj,
+									"tasl" : task,
+									"client" : client,
+									"tag" : tags[b]
+								});
+							}
 						}else{
 							tableData.push(rowObj);
 						}
