@@ -126,7 +126,7 @@ function pagesCallback(data){
 									"tasl" : task,
 									"client" : client,
 									"tag" : tags[b],
-									"studytype" : studytype,
+									// "studytype" : studytype,
 								});
 							}
 						}else{
