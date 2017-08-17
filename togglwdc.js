@@ -94,19 +94,29 @@ function pagesCallback(data){
 						proj = tasks[i].project;
 						task = tasks[i].task;
 						client = tasks[i].client;
-						bill = tasks[i].billable;
-						isbill = tasks[i].is_billable;
 						
-						tableData.push({
+
+						var rowObj = {
 							"desc" : desc,
 							"start" : start,
 							"end" : end,
 							"proj" : proj,
 							"tasl" : task,
 							"client" : client,
-							"bill" : bill,
-							"isbill" : isbill
-						});
+						};
+
+						var tags = tasks[i].tags;
+
+						if(tags.length > 0){
+							for(b = 0; b <= tags.length; b++){
+								rowObj.tags = tags[b];
+								tableData.push(rowObj);
+							}
+						}else{
+							tableData.push(rowObj);
+						}
+
+						
 					}
 				}
 			})
