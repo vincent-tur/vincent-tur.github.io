@@ -45,9 +45,9 @@ function pagesCallback(data){
 			{ id : "end", alias : "End Date", dataType : tableau.dataTypeEnum.datetime },
 			{ id : "proj", alias : "Project", dataType : tableau.dataTypeEnum.string },
 			{ id : "task", alias : "Task", dataType : tableau.dataTypeEnum.string },
-			{ id : "client", alias : "Client", dataType : tableau.dataTypeEnum.string },
+			// { id : "client", alias : "Client", dataType : tableau.dataTypeEnum.string },
 			{ id : "tag", alias : "Tag", dataType : tableau.dataTypeEnum.string },
-			{ id : "studytype", alias : "Study Type", dataType : tableau.dataTypeEnum.string }
+			// { id : "studytype", alias : "Study Type", dataType : tableau.dataTypeEnum.string }
 		];
 		
 		var tableInfo = {
@@ -93,7 +93,7 @@ function pagesCallback(data){
 						end = tasks[i].end.substring(0,10) + " " + tasks[i].end.substring(11,18);
 						proj = tasks[i].project;
 						task = tasks[i].task;
-						client = tasks[i].client;
+						// client = tasks[i].client;
 						
 
 						var rowObj = {
@@ -102,7 +102,7 @@ function pagesCallback(data){
 							"end" : end,
 							"proj" : proj,
 							"tasl" : task,
-							"client" : client,
+							// "client" : client,
 						};
 
 						tags = tasks[i].tags;
@@ -124,7 +124,7 @@ function pagesCallback(data){
 									"end" : end,
 									"proj" : proj,
 									"tasl" : task,
-									"client" : client,
+									// "client" : client,
 									"tag" : tags[b],
 									// "studytype" : studytype,
 								});
@@ -132,8 +132,6 @@ function pagesCallback(data){
 						}else{
 							tableData.push(rowObj);
 						}
-
-						// tableData.push(rowObj);
 
 						
 					}
