@@ -46,7 +46,8 @@ function pagesCallback(data){
 			{ id : "proj", alias : "Project", dataType : tableau.dataTypeEnum.string },
 			{ id : "task", alias : "Task", dataType : tableau.dataTypeEnum.string },
 			{ id : "client", alias : "Client", dataType : tableau.dataTypeEnum.string },
-			{ id : "tag", alias : "Tag", dataType : tableau.dataTypeEnum.string }
+			{ id : "tag", alias : "Tag", dataType : tableau.dataTypeEnum.string },
+			{ id : "studytype", alias : "Study Type", dataType : tableau.dataTypeEnum.string }
 		];
 		
 		var tableInfo = {
@@ -106,6 +107,12 @@ function pagesCallback(data){
 
 						var tags = tasks[i].tags;
 						if(tags !== undefined && tags !== null && tags.length > 0){
+							studytype = null;
+							if (tags.includes("Active")){
+								studytype = "Active";
+							} else if(tags.includes("Passive")){
+								studytype = "Passive";
+							}
 							for(b = 0; b <= tags.length; b++){
 								rowObj.tags = tags[b];
 								tableData.push({
@@ -116,6 +123,7 @@ function pagesCallback(data){
 									"tasl" : task,
 									"client" : client,
 									"tag" : tags[b],
+									"studytype" : studytype
 								});
 							}
 						}else{
