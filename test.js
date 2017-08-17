@@ -10,7 +10,17 @@ var url = "https://toggl.com/reports/api/v2/details?user_agent=fa_vince@hotmail.
 		success: function (resp) {
 			var tasks = resp.data; 
 			for (var i = 0, len = tasks.length; i < len; i++){
-				console.log(tasks[i]);
+
+
+				var tags = tasks[i].tags;
+				if(tags != null && tags.length > 0){
+					for(b = 0; b <= tags.length; b++){
+						console.log(tags[b]);
+					}
+				}else{
+					// tableData.push(rowObj);
+					console.log('no tags');
+				}
 			}
 		}
 	});
