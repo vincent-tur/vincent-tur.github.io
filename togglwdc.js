@@ -102,7 +102,6 @@ function pagesCallback(data){
 							"proj" : proj,
 							"tasl" : task,
 							"client" : client,
-							"tag" : "wurt",
 						};
 
 						var tags = tasks[i].tags;
