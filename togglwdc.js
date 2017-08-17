@@ -46,8 +46,7 @@ function pagesCallback(data){
 			{ id : "proj", alias : "Project", dataType : tableau.dataTypeEnum.string },
 			{ id : "task", alias : "Task", dataType : tableau.dataTypeEnum.string },
 			{ id : "client", alias : "Client", dataType : tableau.dataTypeEnum.string },
-			{ id : "bill", alias : "Billable", dataType : tableau.dataTypeEnum.float },
-			{ id : "isbill", alias : "Is Billable", dataType : tableau.dataTypeEnum.bool }
+			{ id : "tag", alias : "Billable", dataType : tableau.dataTypeEnum.string }
 		];
 		
 		var tableInfo = {
