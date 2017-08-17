@@ -115,9 +115,9 @@ function pagesCallback(data){
 								studytype = "Passive";
 							}
 							for(b = 0; b <= tags.length; b++){
-								if(tags[b].includes(restrictedTags)){
-									continue;
-								}
+								// if(tags[b].includes(restrictedTags)){
+								// 	continue;
+								// }
 								rowObj.tags = tags[b];
 								tableData.push({
 									"desc" : desc,
@@ -126,8 +126,8 @@ function pagesCallback(data){
 									"proj" : proj,
 									"tasl" : task,
 									"client" : client,
-									"tag" : tags[b],
-									"studytype" : studytype
+									"tag" : tags[b]
+									// "studytype" : studytype
 								});
 							}
 						}else{
