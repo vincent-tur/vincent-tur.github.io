@@ -107,6 +107,7 @@ function pagesCallback(data){
 
 						var tags = tasks[i].tags;
 						if(tags !== undefined && tags !== null && tags.length > 0){
+							var restrictedTags = ["Active", "Passive"];
 							studytype = null;
 							if (tags.includes("Active")){
 								studytype = "Active";
@@ -114,6 +115,9 @@ function pagesCallback(data){
 								studytype = "Passive";
 							}
 							for(b = 0; b <= tags.length; b++){
+								if(tags[b].includes(restrictedTags)){
+									continue;
+								}
 								rowObj.tags = tags[b];
 								tableData.push({
 									"desc" : desc,
