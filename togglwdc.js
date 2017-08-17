@@ -125,8 +125,8 @@ function pagesCallback(data){
 									"proj" : proj,
 									"tasl" : task,
 									"client" : client,
-									"tag" : tags[b]
-									"studytype" : studytype
+									"tag" : tags[b],
+									"studytype" : studytype,
 								});
 							}
 						}else{
