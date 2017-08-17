@@ -107,7 +107,7 @@ function pagesCallback(data){
 
 						tags = tasks[i].tags;
 						if(tags !== undefined && tags !== null && Array.isArray(tags) && tags.length > 0){
-							restrictedTags = ["Active", "Passive"];
+							// restrictedTags = ["Active", "Passive"];
 							// var studytype = "";
 							// if (tags.includes("Active")){
 							// 	studytype = "Active";
@@ -115,9 +115,9 @@ function pagesCallback(data){
 							// 	studytype = "Passive";
 							// }
 							for(b = 0; b <= tags.length; b++){
-								if(restrictedTags.includes(tags[b])){
-									continue;
-								}
+								// if(restrictedTags.includes(tags[b])){
+								// 	continue;
+								// }
 								tableData.push({
 									"desc" : desc,
 									"start" : start,
