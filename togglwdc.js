@@ -105,16 +105,17 @@ function pagesCallback(data){
 							"client" : client,
 						};
 
-						var tags = tasks[i].tags;
+						// var tags = tasks[i].tags;
+						// if(tags.length > 0){
+						// 	for(b = 0; b <= tags.length; b++){
+						// 		rowObj.tags = tags[b];
+						// 		tableData.push(rowObj);
+						// 	}
+						// }else{
+						// 	tableData.push(rowObj);
+						// }
 
-						if(tags.length > 0){
-							for(b = 0; b <= tags.length; b++){
-								rowObj.tags = tags[b];
-								tableData.push(rowObj);
-							}
-						}else{
-							tableData.push(rowObj);
-						}
+						tableData.push(rowObj);
 
 						
 					}
