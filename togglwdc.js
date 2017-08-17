@@ -108,17 +108,16 @@ function pagesCallback(data){
 						var tags = tasks[i].tags;
 						if(tags !== undefined && tags !== null && tags.length > 0){
 							var restrictedTags = ["Active", "Passive"];
-							studytype = null;
+							var studytype = null;
 							if (tags.includes("Active")){
 								studytype = "Active";
 							} else if(tags.includes("Passive")){
 								studytype = "Passive";
 							}
 							for(b = 0; b <= tags.length; b++){
-								if(tags[b].includes(restrictedTags)){
+								if(restrictedTags.includes(tags[b])){
 									continue;
 								}
-								rowObj.tags = tags[b];
 								tableData.push({
 									"desc" : desc,
 									"start" : start,
@@ -127,7 +126,7 @@ function pagesCallback(data){
 									"tasl" : task,
 									"client" : client,
 									"tag" : tags[b]
-									// "studytype" : studytype
+									"studytype" : studytype
 								});
 							}
 						}else{
