@@ -123,6 +123,9 @@ function pagesCallback(data){
 								// if(restrictedTags.includes(tags[b])){
 								// 	continue;
 								// }
+								if(tags[b] == null || tags[b] == undefined){
+									continue;
+								}
 								tableData.push({
 									"desc" : desc,
 									"start" : start,
