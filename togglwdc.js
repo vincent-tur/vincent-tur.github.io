@@ -94,7 +94,7 @@ function pagesCallback(data){
 						end = tasks[i].end.substring(0,10) + " " + tasks[i].end.substring(11,18);
 						proj = tasks[i].project;
 						task = tasks[i].task;
-						dir = ((tasks[i].dir / 1000) / 60);
+						dur = ((tasks[i].dur / 1000) / 60);
 						// client = tasks[i].client;
 						
 
@@ -104,7 +104,7 @@ function pagesCallback(data){
 							"end" : end,
 							"proj" : proj,
 							"tasl" : task,
-							"dir" : dir,
+							"dur" : dur,
 							// "client" : client,
 						};
 
@@ -129,7 +129,7 @@ function pagesCallback(data){
 									"tasl" : task,
 									// "client" : client,
 									"tag" : tags[b],
-									"dir" : dir,
+									"dur" : dur,
 									// "studytype" : studytype,
 								});
 							}
