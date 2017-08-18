@@ -95,7 +95,7 @@ function pagesCallback(data){
 						proj = tasks[i].project;
 						task = tasks[i].task;
 						dur = ((tasks[i].dur / 1000) / 60).toFixed(1);
-
+						tags = tasks[i].tags;
 						// client = tasks[i].client;
 						
 
@@ -105,12 +105,13 @@ function pagesCallback(data){
 							"end" : end,
 							"proj" : proj,
 							"tasl" : task,
+							"tag" : tag,
 							"dur" : dur,
 							// "client" : client,
 						};
 
-						tags = tasks[i].tags;
-						if(tags !== undefined && tags !== null && Array.isArray(tags) && tags.length > 0){
+						
+						if(tags !== undefined && tags !== null && Array.isArray(tags) && tags.length > 1){
 							// restrictedTags = ["Active", "Passive"];
 							// var studytype = "";
 							// if (tags.includes("Active")){
