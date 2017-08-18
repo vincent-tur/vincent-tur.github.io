@@ -95,7 +95,7 @@ function pagesCallback(data){
 						proj = tasks[i].project;
 						task = tasks[i].task;
 						dur = ((tasks[i].dur / 1000) / 60);
-						dur.toFixed(1);
+						dur = dur.toFixed(1);
 						// client = tasks[i].client;
 						
 
