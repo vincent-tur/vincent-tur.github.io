@@ -94,8 +94,8 @@ function pagesCallback(data){
 						end = tasks[i].end.substring(0,10) + " " + tasks[i].end.substring(11,18);
 						proj = tasks[i].project;
 						task = tasks[i].task;
-						dur = ((tasks[i].dur / 1000) / 60);
-						dur = dur.toFixed(1);
+						dur = ((tasks[i].dur / 1000) / 60).toFixed(1);
+
 						// client = tasks[i].client;
 						
 
