@@ -47,6 +47,7 @@ function pagesCallback(data){
 			{ id : "task", alias : "Task", dataType : tableau.dataTypeEnum.string },
 			// { id : "client", alias : "Client", dataType : tableau.dataTypeEnum.string },
 			{ id : "tag", alias : "Tag", dataType : tableau.dataTypeEnum.string },
+			{ id : "dur", alias : "Duration", dataType : tableau.dataTypeEnum.int },
 			// { id : "studytype", alias : "Study Type", dataType : tableau.dataTypeEnum.string }
 		];
 		
@@ -93,6 +94,7 @@ function pagesCallback(data){
 						end = tasks[i].end.substring(0,10) + " " + tasks[i].end.substring(11,18);
 						proj = tasks[i].project;
 						task = tasks[i].task;
+						dir = ((tasks[i].dir / 1000) / 60);
 						// client = tasks[i].client;
 						
 
@@ -102,6 +104,7 @@ function pagesCallback(data){
 							"end" : end,
 							"proj" : proj,
 							"tasl" : task,
+							"dir" : dir,
 							// "client" : client,
 						};
 
@@ -126,6 +129,7 @@ function pagesCallback(data){
 									"tasl" : task,
 									// "client" : client,
 									"tag" : tags[b],
+									"dir" : dir,
 									// "studytype" : studytype,
 								});
 							}
