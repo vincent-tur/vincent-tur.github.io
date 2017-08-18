@@ -105,13 +105,13 @@ function pagesCallback(data){
 							"end" : end,
 							"proj" : proj,
 							"tasl" : task,
-							"tag" : tag,
+							"tag" : tags,
 							"dur" : dur,
 							// "client" : client,
 						};
 
 						
-						if(tags !== undefined && tags !== null && Array.isArray(tags) && tags.length > 1){
+						if(tags !== undefined && tags !== null && Array.isArray(tags) && tags.length > 0){
 							// restrictedTags = ["Active", "Passive"];
 							// var studytype = "";
 							// if (tags.includes("Active")){
@@ -119,7 +119,7 @@ function pagesCallback(data){
 							// } else if(tags.includes("Passive")){
 							// 	studytype = "Passive";
 							// }
-							for(b = 0; b <= tags.length; b++){
+							for(b = 0; b < tags.length; b++){
 								// if(restrictedTags.includes(tags[b])){
 								// 	continue;
 								// }
