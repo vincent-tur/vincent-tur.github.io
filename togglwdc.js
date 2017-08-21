@@ -41,6 +41,7 @@ function pagesCallback(data){
 		
 		var cols = [
 			{ id : "desc", alias : "Description", dataType : tableau.dataTypeEnum.string },
+			{ id : "tp_id", alias : "TargetProcess ID", dataType : tableau.dataTypeEnum.string },
 			{ id : "start", alias : "Start Date", dataType : tableau.dataTypeEnum.datetime },
 			{ id : "end", alias : "End Date", dataType : tableau.dataTypeEnum.datetime },
 			{ id : "proj", alias : "Project", dataType : tableau.dataTypeEnum.string },
@@ -98,9 +99,12 @@ function pagesCallback(data){
 						tags = tasks[i].tags;
 						// client = tasks[i].client;
 						
+						tp_id = desc.match(/#(\d+)/g) || null;
+
 
 						var rowObj = {
 							"desc" : desc,
+							"tp_id" : tp_id,
 							"start" : start,
 							"end" : end,
 							"proj" : proj,
