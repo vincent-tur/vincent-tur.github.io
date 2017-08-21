@@ -99,7 +99,7 @@ function pagesCallback(data){
 						tags = tasks[i].tags;
 						// client = tasks[i].client;
 						
-						tp_id = desc.match(/#(\d+)/g) || null;
+						tp_id = desc.match(/#(\d+)/g);
 
 
 						var rowObj = {
@@ -132,6 +132,7 @@ function pagesCallback(data){
 								}
 								tableData.push({
 									"desc" : desc,
+									"tp_id" : tp_id,
 									"start" : start,
 									"end" : end,
 									"proj" : proj,
