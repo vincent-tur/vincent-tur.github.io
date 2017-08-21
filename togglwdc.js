@@ -99,8 +99,15 @@ function pagesCallback(data){
 						tags = tasks[i].tags;
 						// client = tasks[i].client;
 						
+
 						tp_id = tasks[i].description.match(/#(\d+)/);
-						tp_id = tp_id[1];
+						if(tp_id != null){
+							if(tp_id.length > 1){
+								tp_id = tp_id[1];
+							}
+							
+						}
+						
 
 						var rowObj = {
 							"desc" : desc,
