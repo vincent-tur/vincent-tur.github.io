@@ -99,8 +99,8 @@ function pagesCallback(data){
 						tags = tasks[i].tags;
 						// client = tasks[i].client;
 						
-						tp_id = desc.match(/#(\d+)/g);
-
+						tp_id = desc.match(/#(\d+)/);
+						tp_id = tp_id[1];
 
 						var rowObj = {
 							"desc" : desc,
