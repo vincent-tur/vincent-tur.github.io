@@ -46,9 +46,8 @@ function pagesCallback(data){
 			{ id : "end", alias : "End Date", dataType : tableau.dataTypeEnum.datetime },
 			{ id : "proj", alias : "Project", dataType : tableau.dataTypeEnum.string },
 			{ id : "task", alias : "Task", dataType : tableau.dataTypeEnum.string },
-			// { id : "client", alias : "Client", dataType : tableau.dataTypeEnum.string },
 			{ id : "tag", alias : "Tag", dataType : tableau.dataTypeEnum.string },
-			{ id : "first_encounter", alias : "First Encounter", dataType : tableau.dataTypeEnum.boolean },
+			// { id : "first_encounter", alias : "First Encounter", dataType : tableau.dataTypeEnum.boolean },
 			{ id : "dur", alias : "Duration", dataType : tableau.dataTypeEnum.float },
 			// { id : "studytype", alias : "Study Type", dataType : tableau.dataTypeEnum.string }
 		];
@@ -118,9 +117,8 @@ function pagesCallback(data){
 							"proj" : proj,
 							"tasl" : task,
 							"tag" : tags,
-							"first_encounter" : first_encounter,
+							// "first_encounter" : first_encounter,
 							"dur" : dur,
-							// "client" : client,
 						};
 
 						
