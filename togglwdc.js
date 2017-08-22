@@ -48,6 +48,7 @@ function pagesCallback(data){
 			{ id : "task", alias : "Task", dataType : tableau.dataTypeEnum.string },
 			// { id : "client", alias : "Client", dataType : tableau.dataTypeEnum.string },
 			{ id : "tag", alias : "Tag", dataType : tableau.dataTypeEnum.string },
+			{ id : "first_encounter", alias : "First Encounter", dataType : tableau.dataTypeEnum.boolean },
 			{ id : "dur", alias : "Duration", dataType : tableau.dataTypeEnum.float },
 			// { id : "studytype", alias : "Study Type", dataType : tableau.dataTypeEnum.string }
 		];
@@ -98,7 +99,7 @@ function pagesCallback(data){
 						dur = ((tasks[i].dur / 1000) / 60).toFixed(1);
 						tags = tasks[i].tags;
 						// client = tasks[i].client;
-						
+						first_encounter = null;
 
 						tp_id = tasks[i].description.match(/#(\d+)/);
 						if(tp_id != null){
@@ -117,26 +118,30 @@ function pagesCallback(data){
 							"proj" : proj,
 							"tasl" : task,
 							"tag" : tags,
+							"first_encounter" : first_encounter,
 							"dur" : dur,
 							// "client" : client,
 						};
 
 						
 						if(tags !== undefined && tags !== null && Array.isArray(tags) && tags.length > 0){
-							// restrictedTags = ["Active", "Passive"];
-							// var studytype = "";
-							// if (tags.includes("Active")){
-							// 	studytype = "Active";
-							// } else if(tags.includes("Passive")){
-							// 	studytype = "Passive";
-							// }
+					
 							for(b = 0; b < tags.length; b++){
 								// if(restrictedTags.includes(tags[b])){
 								// 	continue;
 								// }
-								if(tags[b] == null || tags[b] == undefined){
-									continue;
-								}
+
+								
+								// if(tags[b] == null || tags[b] == undefined){
+								// 	continue;
+								// }
+								// if(tags[b][0] == '!'){
+								// 	specialTag = tags[b].split(":");
+
+								// 	if(specialTag[0] == '!Column'){
+								// 		// if(sp)
+								// 	}
+								// }
 								tableData.push({
 									"desc" : desc,
 									"tp_id" : tp_id,
